@@ -7,7 +7,7 @@ This repository contains the end-to-end data engineering pipeline implementing a
 Data Engineering Pipeline: Medallion Architecture with Databricks & Azure Synapse
 This repository contains the end-to-end data engineering pipeline implementing a Medallion Architecture (Bronze, Silver, Gold) using Microsoft Azure services and Databricks. The pipeline ingests incremental raw data, transforms it into clean analytical datasets, structures it into a star schema, and delivers it to downstream analytical warehouses and reporting tools.
 
-🏗️ Architecture Overview
+# 🏗️Architecture Overview
 The pipeline follows a modern data lakehouse design pattern, structured as follows:
 
 [Data Sources] ➔ [ADF / Databricks Ingestion] ➔ [Bronze (Raw)] ➔ [Silver (Transformed)] ➔ [Gold (Star Schema)] ➔ [Synapse / Power BI]
@@ -35,7 +35,7 @@ Reporting: Power BI connects directly to the gold layer or Synapse warehouse to 
 4. Cross-Cutting Concerns
 Security & Governance: Integrated using Azure Key Vault (for secure credential management) and Microsoft Entra ID / Unity Catalog for access control.
 
-
+# Prerequisites
 Before deploying the pipeline, ensure you have access to and configuration rights for:
 
 An active Azure Subscription.
@@ -50,7 +50,7 @@ Azure Synapse Analytics SQL Pool.
 
 GitHub repository linked to your ADF and Databricks workspaces.
 
-Environment Setup
+# Environment Setup
 1. Security & Secrets Management
 Create an Azure Key Vault.
 
@@ -66,7 +66,7 @@ Configure access to your Delta Lake storage layers using the Azure Blob File Sys
 Python
 spark.conf.set(f"fs.azure.account.key.{storage_account_name}.dfs.core.windows.net", 
                dbutils.secrets.get(scope="azure-key-vault", key="storage-account-key"))
-⚙️ Pipeline Execution Flow
+# ⚙️Pipeline Execution Flow
 The pipeline runs sequentially, managed automatically by Azure Data Factory:
 
 Ingest: ADF triggers data movement, landing files into /mnt/bronze/raw_data_store/.
@@ -77,7 +77,7 @@ Model: The 03_serving_gold notebook processes the Silver Delta tables into multi
 
 Load & Visualize: ADF instructs Synapse to refresh its relational tables, triggering an automated visual refresh in the targeted Power BI dashboards.
 
-🛠️ Development & Deployment (CI/CD)
+# 🛠️Development & Deployment (CI/CD)
 Feature Branching: Developers create feature branches from main.
 
 ADF & Notebook Sync: Local modifications to Databricks notebooks or ADF pipelines are synced via native GitHub integrations.
