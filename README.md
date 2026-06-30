@@ -2,7 +2,7 @@
 Data Engineering Pipeline: Medallion Architecture with Databricks & Azure Synapse
 This repository contains the end-to-end data engineering pipeline implementing a Medallion Architecture (Bronze, Silver, Gold) using Microsoft Azure services and Databricks. The pipeline ingests incremental raw data, transforms it into clean analytical datasets, structures it into a star schema, and delivers it to downstream analytical warehouses and reporting tools.
 
-![Alt Text]([path/to/image.png](https://github.com/Maccha-Ankit/End-to-End-Azure-Pipeline-ADF-Databricks-ADLS-Gen2-Synapse-Power-BI/blob/471876a0db42747a6689fd8287e9f2ad67788110/project_architecture.png))
+![Project Architecture](https://github.com/Maccha-Ankit/End-to-End-Azure-Pipeline-ADF-Databricks-ADLS-Gen2-Synapse-Power-BI/raw/471876a0db42747a6689fd8287e9f2ad67788110/project_architecture.png)
 
 Data Engineering Pipeline: Medallion Architecture with Databricks & Azure Synapse
 This repository contains the end-to-end data engineering pipeline implementing a Medallion Architecture (Bronze, Silver, Gold) using Microsoft Azure services and Databricks. The pipeline ingests incremental raw data, transforms it into clean analytical datasets, structures it into a star schema, and delivers it to downstream analytical warehouses and reporting tools.
