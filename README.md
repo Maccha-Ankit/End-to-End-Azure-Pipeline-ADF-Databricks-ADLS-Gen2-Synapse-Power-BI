@@ -85,3 +85,11 @@ ADF & Notebook Sync: Local modifications to Databricks notebooks or ADF pipeline
 Automated Testing: Pull Requests trigger GitHub Actions workflows to validate template syntaxes.
 
 Release: Merging into main automatically promotes and deploys code artifacts to the production environments.
+
+## 📊 Power BI Dashboard
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f63817a7-4754-4abd-a295-1e6a3f5105e7"
+       alt="Netflix Power BI Dashboard"
+       width="100%">
+</p>
